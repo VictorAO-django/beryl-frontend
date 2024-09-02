@@ -20,6 +20,8 @@ export default {
         'slider2': '#036160',
         'slider3': '#422600',
         'slider4': '#484848',
+        'footer1': '#313133',
+        'footer2': '#535257',
         'hover': '#d88c1b',
       },
       borderColor: {
