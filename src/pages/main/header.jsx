@@ -7,15 +7,15 @@ function Header(){
 
     return (
         <section>
-            <nav className="container flex-col items-center justify-between min-w-full p-4 bg-white shadow-md">
-                <div className="container flex items-center justify-between w-full">
+            <nav className="w-full flex-col items-center p-4 bg-white shadow-md">
+                <div className="flex items-center justify-between w-full">
                     <div className="flex items-center justify-between grow">
                         <div className="text-lg">
                             <NavLink to="/" className="font-montserrat-semi hover:text-gray-300 text-main-color">
                                 Beryl Store
                             </NavLink>
                         </div>
-                        <div className="hidden space-x-10 md:flex items-center">
+                        <div className="hidden space-x-4 lg:space-x-10 lg:flex items-center">
                             <NavLink to="/" className="font-montserrat-medium text-[14px]  hover:text-main-color transition-all duration-300">
                                 Category
                             </NavLink>
@@ -31,13 +31,13 @@ function Header(){
                         </div>
                     </div>
 
-                    <div className="grow flex items-center justify-around">
-                        <div className="">
+                    <div className="grow hidden items-center justify-around md:flex">
+                        <div className="w-full lg:w-auto">
                             <form action="" className="relative flex items-center justify-center">
                                 <input 
                                 placeholder="Search Product" 
                                 type="text" 
-                                className="text-gray-700 border bg-gray-100 border-gray-300 rounded-xl focus:outline-none focus:ring-1 focus:ring-main-color text-[13px] pr-10 px-4 py-1 font-montserrat-regular"
+                                className="w-full text-gray-700 border bg-gray-100 border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-main-color text-[14px] pr-10 px-4 py-1 font-montserrat-regular"
                                 />
                                 <span className="absolute inset-y-0 flex items-center pl-3 right-4">
                                     <FaSearch className="text-gray-600" />
@@ -46,12 +46,12 @@ function Header(){
                         </div>
                     </div>
 
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-end pr-6 grow lg:grow-0">
                         <div className="flex items-center space-x-1">
                             <span className="inset-y-0 flex items-center pl-3 right-4 w-[38px]">
                             <img src="/account.png" alt="account" />
                             </span>
-                            <NavLink to="/account/settings" className="mt-[8px] font-montserrat-medium text-[14px]">
+                            <NavLink to="/account/settings" className="font-montserrat-medium text-[14px]">
                             Account
                             </NavLink>
                         </div>
@@ -59,13 +59,13 @@ function Header(){
                             <span className="inset-y-0 flex items-center pl-3 right-4 w-[36px]">
                                 <img src="/shopping_cart.png" alt="cart" />
                             </span>
-                            <NavLink to="/cart" className="mt-[8px] font-montserrat-medium text-[14px]">
+                            <NavLink to="/cart" className="font-montserrat-medium text-[14px]">
                             Cart
                             </NavLink>
                         </div>
                     </div>
 
-                    <div className="md:hidden">
+                    <div className="lg:hidden flex justify-around">
                         <button 
                         className="text-black focus:outline-none"
                         onClick={() => setIsOpen(!isOpen)}
@@ -107,17 +107,27 @@ function Header(){
                 )}
             </nav>
 
-            <div className="h-[350px] flex justify-start items-center  bg-slider2">
-                <div className="ml-[4rem]">
+            <div className="min-h-[350px] flex justify-start items-center py-10">
+                <div className="mx-5 xs:mx-10 lg:mx-20">
                     <p className="text-5xl font-montserrat-medium">
                         Shopping And <br />Department Store.
                     </p>
                     <p className="font-montserrat-regular text-[14px] my-6">
-                        Shopping is a bit of a relaxing hobby for me, which <br /> is sometimes troubling for the bank balance.
+                        Shopping is a bit of a relaxing hobby for me, which <br className="hidden xs:flex" /> is sometimes troubling for the bank balance.
                     </p>
                     <NavLink to="/doc" className="bg-main-color rounded-full font-montserrat-medium text-[14px] text-white py-2.5 px-5 hover:bg-hover transition-all duration-300 shadow-lg">
                         Learn More
                     </NavLink>
+                    <form action="" className="relative top-8 md:hidden flex items-center justify-center">
+                        <input 
+                        placeholder="Search Product" 
+                        type="text" 
+                        className="w-full text-gray-700 border bg-gray-100 border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-main-color text-[14px] pr-10 px-4 py-3 font-montserrat-regular"
+                        />
+                        <span className="absolute inset-y-0 flex items-center pl-3 right-4">
+                            <FaSearch className="text-gray-600" />
+                        </span>
+                    </form>
                 </div>
             </div>
         </section>

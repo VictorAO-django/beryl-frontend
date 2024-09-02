@@ -4,9 +4,9 @@ import Header from "./pages/main/header";
 
 function Layout(){
     return (
-        <div>
+        <div className="border border-yellow-600">
             <Header />
-            <main className="">
+            <main>
                 <Outlet />
             </main>
         </div>

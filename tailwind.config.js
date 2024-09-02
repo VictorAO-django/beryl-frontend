@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '540px',
+        'xxs': '400px',
+        'xxxs': '350px'
+      },
       backgroundColor: {
         'main-color': '#FE9900',
         'light-blue': '#EFECF7',

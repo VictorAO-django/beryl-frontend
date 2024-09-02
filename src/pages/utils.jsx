@@ -36,23 +36,19 @@ export const Slider = ({ slides }) => {
         return () => clearInterval(slideInterval);
     }, [currentIndex, slides.length]);
 
-    const bgColor = slides[currentIndex].bgColor
-    const containerStyle = "w-full h-full flex justify-start items-center" + bgColor
-
     return (
-        <div className={"w-full h-full flex justify-start items-center p-4 bg-slider1"}>
+        <div className="w-full h-full flex flex-col xs:flex-row justify-start items-center p-4" style={{backgroundColor: slides[currentIndex].bg_color}}>
             <div className="w-full max-w-lg mx-auto">
                 <div className="p-4">
-                    <h2 className="text-2xl font-montserrat-semi text-white">
+                    <h2 className="text-lg xs:text-2xl font-montserrat-medium xs:font-montserrat-semi text-white">
                         {slides[currentIndex].title}
                     </h2>
-                    <p className="text-lg text-white font-montserrat-regular my-4">
-                        {slides[currentIndex].content} {bgColor}
+                    <p className="text-md text-white font-montserrat-regular my-1  xs:my-4">
+                        {slides[currentIndex].content}
                     </p>
                 </div>
-                <div className='flex justify-center mt-4 space-x-2'>
+                <div className='flex justify-center mt-0 xs:mt-4 space-x-2'>
                 {slides.map((_, index) => {
-                    const Active = index === currentIndex
                     const circleClass = index === currentIndex ? "w-3 h-3 rounded-full border-2 bg-white" : "w-3 h-3 rounded-full border-2 border-white bg-transparent"
                     return(
                         <div 
@@ -65,8 +61,8 @@ export const Slider = ({ slides }) => {
                 
             </div>
 
-            <div className="mt-2 grow">
-                <div className="relative w-[300px] h-[300px] rounded-lg overflow-hidden">
+            <div className="hidden xs:flex mt-2 grow">
+                <div className="relative w-[180px] h-[150px] xs:w-[200px] md:w-[280px] md:h-[280px] lg:w-[300px] lg:h-[300px] rounded-lg overflow-hidden">
                     <img 
                     src={slides[currentIndex].image}
                     alt={slides[currentIndex].alt}
