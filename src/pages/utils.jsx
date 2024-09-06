@@ -66,7 +66,7 @@ export const Slider = ({ slides }) => {
                     <img 
                     src={slides[currentIndex].image}
                     alt={slides[currentIndex].alt}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover z-0"
                     />
                 </div>
             </div>

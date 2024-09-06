@@ -7,7 +7,7 @@ function Header(){
 
     return (
         <section>
-            <nav className="w-full flex-col items-center p-4 bg-white shadow-md z-0">
+            <nav className="fixed top-0 w-full flex-col items-center p-4 bg-white shadow-md z-10">
                 <div className="flex items-center justify-between w-full">
                     <div className="flex items-center justify-between grow">
                         <div className="text-lg">
@@ -107,7 +107,7 @@ function Header(){
                 )}
             </nav>
 
-            <div className="min-h-[350px] flex justify-start items-center py-10">
+            <div className="bg-display bg-cover bg-top min-h-[350px] flex justify-start items-center py-10 mt-16">
                 <div className="mx-5 xs:mx-10 lg:mx-20">
                     <p className="text-5xl font-montserrat-medium">
                         Shopping And <br />Department Store.

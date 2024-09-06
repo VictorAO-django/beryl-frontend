@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage:{
+        'display': "url(/explore.jpg)",
+      },
       screens: {
         'xs': '540px',
         'xxs': '400px',
